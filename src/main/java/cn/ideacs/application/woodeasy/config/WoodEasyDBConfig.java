@@ -16,8 +16,8 @@ public class WoodEasyDBConfig {
 
     private static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/ideacs_db";
-    private static final String USERNAME = "";
-    private static final String PASSWORD = "";
+    private static final String USERNAME = "ideacs";
+    private static final String PASSWORD = "ideacs123";
     private static final Integer poolMax = 10;
 
     @Bean
