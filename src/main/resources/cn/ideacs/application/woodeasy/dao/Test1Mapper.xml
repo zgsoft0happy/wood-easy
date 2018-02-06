@@ -20,6 +20,4 @@
         FROM test1_tb
         WHERE id = #{id}
     </select>
-
-
 </mapper>

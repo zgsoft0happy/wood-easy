@@ -13,7 +13,6 @@ import org.springframework.web.multipart.support.StandardServletMultipartResolve
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
@@ -83,6 +82,4 @@ public class WoodEasyMvcConfig extends WebMvcConfigurerAdapter {
                 .modulesToInstall(new ParameterNamesModule());
         converters.add(new MappingJackson2HttpMessageConverter(builder.build()));
     }
-
-
 }
