@@ -45,4 +45,6 @@ public interface AccountMapper {
      */
     void deleteById(@Param("id")Long id);
 
+    Account getAccountByName(@Param("username") String userName);
+
 }

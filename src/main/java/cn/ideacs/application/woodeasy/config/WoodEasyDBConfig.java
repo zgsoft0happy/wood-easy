@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 public class WoodEasyDBConfig {
 
     private static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/ideacs_db";
+    private static final String URL = "jdbc:mysql://localhost:3306/ideacs_db?useUnicode=true&&characterEncoding=utf-8";
     private static final String USERNAME = "ideacs";
     private static final String PASSWORD = "ideacs123";
     private static final Integer poolMax = 10;

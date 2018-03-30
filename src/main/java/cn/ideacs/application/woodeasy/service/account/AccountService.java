@@ -20,4 +20,6 @@ public interface AccountService {
     List<Account> list(Integer offset, Integer rows);
 
     void deleteById(Long id);
+
+    Account getAccountByName(String userName);
 }

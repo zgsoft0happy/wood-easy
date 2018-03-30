@@ -45,4 +45,9 @@ public class AccountServiceImpl implements AccountService {
     public void deleteById(Long id) {
         accountMapper.deleteById(id);
     }
+
+    @Override
+    public Account getAccountByName(String userName) {
+        return accountMapper.getAccountByName(userName);
+    }
 }

@@ -16,13 +16,13 @@
         education,
         age,
         gender,
-        is_delete AS isDelete,
+        `delete` AS isDelete,
         remark
     </sql>
 
     <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="cn.ideacs.application.woodeasy.entity.account.Account">
         INSERT INTO account_tb(
-          `username`,`password`,
+          `username`,
           <if test="showName != null">show_name,</if>
           <if test="realName != null">real_name,</if>
           <if test="phone != null">phone,</if>
@@ -33,9 +33,9 @@
           <if test="age != null">age,</if>
           <if test="gender != null">gender,</if>
           <if test="remark != null">remark,</if>
-          is_delete
+          `password`
         ) VALUES (
-          #{username},#{password},
+          #{username},
             <if test="showName != null">#{showName},</if>
             <if test="realName != null">#{realName},</if>
             <if test="phone != null">#{phone},</if>
@@ -46,7 +46,7 @@
             <if test="age != null">#{age},</if>
             <if test="gender != null">#{gender},</if>
             <if test="remark != null">#{remark},</if>
-          #{isDelete}
+          #{password}
         )
     </insert>
 
@@ -63,7 +63,7 @@
           education = #{education},
           age = #{age},
           gender = #{gender},
-          is_delete = #{isDelete},
+          `delete` = #{isDelete},
           remark = #{remark}
         WHERE id = #{id}
     </update>
@@ -79,8 +79,15 @@
         SELECT
           <include refid="baseColumnList"/>
         FROM account_tb
-        WHERE is_delete = 0
+        WHERE `delete` = 0
         LIMIT #{offset},#{rows}
+    </select>
+
+    <select id="getAccountByName"  resultType="cn.ideacs.application.woodeasy.entity.account.Account">
+        SELECT
+          <include refid="baseColumnList"/>
+        FROM account_tb
+        WHERE `username` = #{username} AND `delete` = 0
     </select>
 
 </mapper>

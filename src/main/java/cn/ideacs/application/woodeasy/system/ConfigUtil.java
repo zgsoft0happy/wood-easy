@@ -19,7 +19,7 @@ public class ConfigUtil  extends PropertyPlaceholderConfigurer implements Initia
     @Override
     public void setLocations(Resource... locations) {
 
-        if (locations == null & locations.length <= 0) {
+        if (locations == null || locations.length <= 0) {
             return;
         }
         Resource resource = locations[0];
