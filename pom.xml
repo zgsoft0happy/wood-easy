@@ -136,11 +136,6 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
-      <groupId>cn.ideacs.util</groupId>
-      <artifactId>ideacs-util</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
   </dependencies>
   <build>
     <finalName>wood-easy</finalName>
